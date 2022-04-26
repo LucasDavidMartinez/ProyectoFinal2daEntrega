@@ -4,44 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--ICONOs-->
+    <script src="https://kit.fontawesome.com/3665fb8f67.js" crossorigin="anonymous"></script>
     <!--CSS-->
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     
-    <header>
+    <header class="header">
 
-        <div class="navbarContainer">
-            <nav class="navbar">
-                <div class="logocontainer">
-                    <a href="index.html">
-                        <img src="/imagenesyiconos/PowerArg-sinfondo.png" class="logo_img" alt="Logo">
-                        <p class="logo_text">powerarg</p>
-                    </a>
-                </div>
-
-            
-
-
-
-
-
-
-
-
-            </nav>
+        <div class="header-top">
+            <img src="/imagenesyiconos/PowerArg-sinfondo.png" class="logoimg" alt="Logo">
+            <p class="logo_text">powerarg</p>
+            <button class="header-btn">
+                <i class="fa-solid fa-bars menuhamburguesa"></i>
+            </button>
         </div>
+            
+        <nav class="header-menu">
+            <ul>
+                <li><a href="index.html">inicio</a></li>
+                <li><a href="servicios.html">servicios</a></li>
+                <li><a href="productos.html">productos</a></li>
+                <li><a href="clientes.html">clientes</a></li>
+                <li><a href=".contactanos">contactos</a></li>
+            </ul>
+        </nav>
 
-
-
-
-
-
-
-
-
-
+        <div class="header-menu-dos">
+            <a href="signup.html"><i class="fa-solid fa-user-plus"></i></a>
+            <a href="login.html"><i class="fa-solid fa-right-to-bracket"></i></a>
+            <a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
     </header>
 
 
@@ -55,6 +50,19 @@
 
 
 
-
+    <script>
+        const header_btn = document.querySelector(".header-btn")
+        const header_menu = document.querySelector(".header-menu")
+        const header_menu_dos = document.querySelector(".header-menu-dos")
+        header_btn.addEventListener("click", () => {
+            if (header_menu.style.display != "block"){
+                header_menu.style.display = "block"
+                header_menu_dos.style.display = "flex"
+            } else{
+                header_menu.style.display = "none"
+                header_menu_dos.style.display = "none"
+            }
+        })
+    </script>
 </body>
 </html>
